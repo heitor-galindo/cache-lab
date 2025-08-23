@@ -1,5 +1,6 @@
 package com.cache.lab.cache_lab.controller;
 
+import com.cache.lab.cache_lab.model.Product;
 import com.cache.lab.cache_lab.service.ProductService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,7 +16,7 @@ public class ProductController {
     }
 
     @GetMapping("/product/{id}")
-    public String getProduct(@PathVariable Long id) {
+    public Product getProduct(@PathVariable Long id) {
         return this.productService.getProduct(id);
     }
 }
